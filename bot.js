@@ -1,18 +1,8 @@
-client.on('ready', function(){
-    client.user.setStatus("dnd");
-    var ms = 100000 ;
-    var setGame = [`+help Servers ${client.guilds.size} `,`+invite Users ${client.users.size}`];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
-    }, ms);100000
+const Discord = require("discord.js");
+const client = new Discord.Client();
+client.on('ready', () => {
+    client.user.setGame(`  الكلام الي تبيه  `,'https://www.twitch.tv/MeeRcY')
 
 });
+
+client.login(process.env.BOT_TOKEN); 
